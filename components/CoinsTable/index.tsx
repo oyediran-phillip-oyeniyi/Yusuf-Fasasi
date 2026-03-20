@@ -12,7 +12,7 @@ interface CoinsTableProps {
 const CoinsTable = async ({ currentPage }: CoinsTableProps) => {
   const perPage = 10;
 
-  const coinsData = await fetcher<CoinMarketData[]>('/coins/markets', {
+  const coinsData = await fetcher<CoinMarketData[]>('coins/markets', {
     vs_currency: 'usd',
     order: 'market_cap_desc',
     per_page: perPage,
