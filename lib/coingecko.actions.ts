@@ -21,7 +21,7 @@ export async function fetcher<T>(
   
   const url = qs.stringifyUrl(
     {
-      url: `${BASE_URL}/${endpoint}`,
+      url: `${BASE_URL}${endpoint}`,
       query: queryParams,
     },
     { skipEmptyString: true, skipNull: true },

@@ -16,15 +16,15 @@ const CoinOverview = async () => {
         developer_data: false,
         sparkline: false,
       }),
-      fetcher<OHLCData[]>('coins/bitcoin/ohlc', {
+      fetcher<OHLCData[]>('/coins/bitcoin/ohlc', {
         vs_currency: 'usd',
         days: '1',
         precision: 'full',
       }),
     ]);
 
-    console.log('Coin data:', coin); // Debug log
-    console.log('OHLC data:', coinOHLCData); // Debug log
+    console.log('Coin data:', coin);
+    console.log('OHLC data:', coinOHLCData);
 
     return (
       <div id="coin-overview">
